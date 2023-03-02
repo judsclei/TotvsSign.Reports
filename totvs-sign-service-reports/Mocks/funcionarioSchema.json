@@ -1,0 +1,58 @@
+{
+  "name": "9b8ef474-35be-48fc-88ae-cff2003e757c",
+  "displayName": "Objeto de Negócio sem Parâmetro",
+  "description": "Objeto de Teste Parâmetro",
+  "areas": [
+    "Mockoon"
+  ],
+  "schemaUrl": "http://localhost:3002//api/bis/v1/native-provider/objects/9b8ef474-35be-48fc-88ae-cff2003e757c/schema",
+  "dataUrl": "http://localhost:3002//api/bis/v1/native-provider/objects/9b8ef474-35be-48fc-88ae-cff2003e757c/data/",
+  "properties": [
+    {
+      "name": "chapa",
+      "displayName": "CHAPA",
+      "description": "CHAPA",
+      "type": "string",
+      "filter": {
+        "isRequired": false
+      }
+    },
+    {
+      "name": "codcoligada",
+      "displayName": "CODCOLIGADA",
+      "description": "CODCOLIGADA",
+      "type": "number",
+      "filter": {
+        "isRequired": false
+      }
+    },
+    {
+      "name": "nome",
+      "displayName": "NOME",
+      "description": "NOME",
+      "type": "string",
+      "filter": {
+        "isRequired": false
+      }
+    },
+    {
+      "name": "salario",
+      "displayName": "SALARIO",
+      "description": "SALARIO",
+      "type": "number",
+      "filter": {
+        "isRequired": false
+      }
+    }
+  ],
+  "parameters": [
+
+    {
+      "name": "chapa",
+      "displayName": "chapa do funcionário",
+      "type": "string",
+      "multiValue": false
+    }
+
+  ]
+}

@@ -46,6 +46,16 @@ namespace totvs_sign_service_reports.Controllers
                     SchemaUrl = "http://localhost/api/IntegratedProviderSample/objectschema/gestaodeestoques",
                     DataUrl = "https://localhost/api/gestaostoques/data"
                 },
+
+
+                new BusinessObject() {
+                    Name = "funcionarios",
+                    DisplayName = "Objeto de Negócio - Funcionários",
+                    Description = "Objeto de negócio para entidade Funciónários.",
+                    Areas = new List<string>() {  "Financeiro", "Compras", "Expedição"},
+                    SchemaUrl = "http://localhost:16908/schema",
+                    DataUrl = "http://localhost:16908/data"
+                }
             };
 
             var result = new BusinessObjectsResponse() { Data = bussinessObjects };

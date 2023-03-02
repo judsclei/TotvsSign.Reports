@@ -1,0 +1,76 @@
+{
+  "data": [
+    {
+      "codcoligada": 1,
+      "chapa": "00001",
+      "nome": "ITAMAR MENDES DA SILVEIRA",
+      "salario": 3192.80
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00003",
+      "nome": "MARIA CONCEICAO DE ASSIS",
+      "salario": 5609.51
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00008",
+      "nome": "ZELIA APARECIDA DA SILVA",
+      "salario": 6787.51
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00010",
+      "nome": "ANTONIO GATES BILL",
+      "salario": 5648.22
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00011",
+      "nome": "MARCELO MATTAR DINIZ",
+      "salario": 3863.30
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00012",
+      "nome": "ANA LUIZA  DE SOUZA PRATES",
+      "salario": 3192.80
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00028",
+      "nome": "EDUARDO VALADARES COELHO CANÇADO",
+      "salario": 3863.30
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00047",
+      "nome": "RODRIGO FIALHO BARRICHELLO",
+      "salario": 3192.80
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00050",
+      "nome": "GEMA MATTOLI DE MENEZES",
+      "salario": 3000.00
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00051",
+      "nome": "DIANA RODRIGUES NOGUEIRA",
+      "salario": 3000.00
+    },
+    {
+      "codcoligada": 1,
+      "chapa": "00052",
+      "nome": "MAURO SANTARÉM DUARTE",
+      "salario": 3000.00
+    },
+    {
+      "codcoligada": 2,
+      "chapa": "00052",
+      "nome": "MAURO2 SANTARÉM DUARTE",
+      "salario": 3000.00
+    }
+  ]
+}

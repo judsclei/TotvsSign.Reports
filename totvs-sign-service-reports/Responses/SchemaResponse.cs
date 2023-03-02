@@ -2,37 +2,37 @@
 {
     public class SchemaResponse
     {
-        public string Name { get; set; }
-        public string DisplayName { get; set; }
-        public string Description { get; set; }
-        public List<string> Areas { get; set; }
-        public string SchemaUrl { get; set; }
-        public string DataUrl { get; set; }
+        public string name { get; set; }
+        public string displayName { get; set; }
+        public string description { get; set; }
+        public List<string> areas { get; set; }
+        public string schemaUrl { get; set; }
+        public string dataUrl { get; set; }
 
-        public List<PropertiesSchema> Properties { get; set; }
-        public List<ParametersSchema> Parameters { get; set; }
+        public List<PropertiesSchema> properties { get; set; }
+        public List<ParametersSchema> parameters { get; set; }
     }
 
     public class PropertiesSchema
     {
-        public string Name { get; set; }
-        public string DisplayName { get; set; }
-        public string Description { get; set; }
-        public string Type { get; set; }
-        public FilterPropertie Filter { get; set; }
+        public string name { get; set; }
+        public string displayName { get; set; }
+        public string description { get; set; }
+        public string type { get; set; }
+        public FilterPropertie filter { get; set; }
     }
 
     public class FilterPropertie
     {
-        public string OptionsUrl { get; set; }
-        public bool IsRequired { get; set; }
+        public string optionsUrl { get; set; }
+        public bool isRequired { get; set; }
     }
 
     public class ParametersSchema
     {
-        public string Name { get; set; }
-        public string DisplayName { get; set; }
-        public string Type { get; set; }
-        public bool MultiValue { get; set; }
+        public string name { get; set; }
+        public string displayName { get; set; }
+        public string type { get; set; }
+        public bool multiValue { get; set; }
     }
 }
