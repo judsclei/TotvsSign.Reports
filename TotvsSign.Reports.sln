@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totvs.Sign.Reports.Api", "totvs-sign-service-reports\Totvs.Sign.Reports.Api.csproj", "{D9342E3C-EDED-414F-9387-BBE3B5270D40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Api", "1 - Api", "{C946982F-338F-4367-8587-63B527581A29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{B7060612-9E3A-4C59-BCA5-684D817F90AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Totvs.Sign.Reports.Domain", "Totvs.Sign.Reports.Domain\Totvs.Sign.Reports.Domain.csproj", "{3376D4FF-BEAF-4AB3-919C-09C4740A06CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9342E3C-EDED-414F-9387-BBE3B5270D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9342E3C-EDED-414F-9387-BBE3B5270D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9342E3C-EDED-414F-9387-BBE3B5270D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9342E3C-EDED-414F-9387-BBE3B5270D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3376D4FF-BEAF-4AB3-919C-09C4740A06CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3376D4FF-BEAF-4AB3-919C-09C4740A06CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3376D4FF-BEAF-4AB3-919C-09C4740A06CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3376D4FF-BEAF-4AB3-919C-09C4740A06CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D9342E3C-EDED-414F-9387-BBE3B5270D40} = {C946982F-338F-4367-8587-63B527581A29}
+		{3376D4FF-BEAF-4AB3-919C-09C4740A06CE} = {B7060612-9E3A-4C59-BCA5-684D817F90AD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BEAAB0B-9C1B-4DB8-80D1-E28CED38D9DC}
+	EndGlobalSection
+EndGlobal
