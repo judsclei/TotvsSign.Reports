@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 using totvs_sign_service_reports.Responses;
 
 namespace totvs_sign_service_reports.Controllers
@@ -7,6 +8,9 @@ namespace totvs_sign_service_reports.Controllers
     [ApiController]
     public class DocumentsBusinessObjectsController : Controller
     {
+        JsonSerializerOptions jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        string pathJsonData = $@"{Directory.GetCurrentDirectory()}\\Mocks\\assinaturaDigitalArquivosData.json";
+
         [HttpGet]
         [Route("schema")]
         public SchemaResponse Schema()
@@ -14,21 +18,19 @@ namespace totvs_sign_service_reports.Controllers
             var response = new SchemaResponse()
             {
                 Name = "acoesmkt01",
-                DisplayName = "Ações de marketing",
-                Description = "Promover e divulgar novos produtos e serviços.",
-                Areas = new List<string>() { "Compras", "Marketing" },
-                SchemaUrl = "http://localhost/api/IntegratedProviderSample/objectschema/acoesdemarketing",
-                DataUrl = "http://localhost/api/IntegratedProviderSample/objectdata/acoesdemarketing",
-                Properties = new List<PropertiesSchema>() { 
-                    new PropertiesSchema(){ Name = "CodigoDoProduto", DisplayName = "Código do Produto", Description = "Código gerado pelo...", Type = "string"},
-                    new PropertiesSchema(){ Name = "ValorDoProduto", DisplayName = "Valor do Produto", Description = "Valor do Produto após...", Type = "number", Filter = new FilterPropertie(){ IsRequired = false} },
-                    new PropertiesSchema(){ Name = "PerfilDoConsumidor", DisplayName = "Perfil do Consumidor", Description = "Classificação do perfil de consumidor", Type = "string", Filter = new FilterPropertie(){ IsRequired = true, OptionsUrl = "http://localhost/api/IntegratedProviderSample/lookupdatakeylabel"} },
-                },
-                Parameters = new List<ParametersSchema>() { 
-                    new ParametersSchema(){ Name = "ParamCodigoFilial", DisplayName = "Código da Filial", Type = "number", MultiValue = false },
-                    new ParametersSchema(){ Name = "ParamCodSecao", DisplayName = "Código da Seção", Type = "string", MultiValue = true },
-                    new ParametersSchema(){ Name = "ParamSituacao", DisplayName = "Código da Situação", Type = "string", MultiValue = true },
-                    new ParametersSchema(){ Name = "ParamUsaValeTransporte", DisplayName = "Usa Vale Transporte?", Type = "boolean", MultiValue = false }
+                DisplayName = "Schema - Documentos TOTVS Assinatura Eletrônica",
+                Description = "Listagem de documentos do TOTVS Assinatura Eletrônica",
+                Areas = new List<string>() { "TAE" },
+                SchemaUrl = "http://localhost:16908/DocumentsBusinessObjects/schema",
+                DataUrl = "http://localhost:16908/DocumentsBusinessObjects/data",
+                Properties = new List<PropertiesSchema>() {
+                    new PropertiesSchema(){ Name = "id", DisplayName = "Id. Documento", Description = "Identificador do documento", Type = "number"},
+                    new PropertiesSchema(){ Name = "nomearquivo", DisplayName = "Nome Documento", Description = "Nome do documento", Type = "string", Filter = new FilterPropertie(){ IsRequired = false} },
+                    new PropertiesSchema(){ Name = "status", DisplayName = "Status", Description = "Status do documento", Type = "string", Filter = new FilterPropertie(){ IsRequired = false} },
+                    new PropertiesSchema(){ Name = "autor", DisplayName = "Autor", Description = "Autor do documento", Type = "string", Filter = new FilterPropertie(){ IsRequired = false} },
+                    new PropertiesSchema(){ Name = "datacriacao", DisplayName = "Data de criação", Description = "Data de criação do documento", Type = "date", Filter = new FilterPropertie(){ IsRequired = false} },
+                    new PropertiesSchema(){ Name = "nomeempresa", DisplayName = "Empresa", Description = "Empresa proprietária do documento", Type = "string", Filter = new FilterPropertie(){ IsRequired = false } },
+                    new PropertiesSchema(){ Name = "tenantid", DisplayName = "Tennti Id", Description = "Identificador da Empresa", Type = "string", Filter = new FilterPropertie(){ IsRequired = false} },
                 }
             };
 
@@ -37,17 +39,14 @@ namespace totvs_sign_service_reports.Controllers
 
         [HttpPost]
         [Route("data")]
-        public TReportsDataResponse Data()
+        public TReportsDataResponse Data(GetDataRequest request)
         {
-            var response = new TReportsDataResponse();
-            response.data = new List<DocumentsDataResponse>
+            using (StreamReader r = new StreamReader(pathJsonData))
             {
-                new DocumentsDataResponse() { Nome = "nome 1"},
-                new DocumentsDataResponse() { Nome = "nome 2"},
-                new DocumentsDataResponse() { Nome = "nome 3"}
-            };
-
-            return response;
+                var jsonData = r.ReadToEnd();
+                
+                return JsonSerializer.Deserialize<TReportsDataResponse>(jsonData, jsonOptions);
+            }
         }
     }
 }

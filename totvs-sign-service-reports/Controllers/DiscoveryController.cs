@@ -37,6 +37,15 @@ namespace totvs_sign_service_reports.Controllers
                     Areas = new List<string>() { "RH" },
                     SchemaUrl = "http://localhost:16908/FuncionarioBusinessObjects/schema",
                     DataUrl = "http://localhost:16908/FuncionarioBusinessObjects/data"
+                },
+
+                new BusinessObject() {
+                    Name = "documentos",
+                    DisplayName = "Objeto de Negócio - Documentos TOTVS Assinatura Eletrônica",
+                    Description = "Objeto de negócio para listagem de documentos do TOTVS Assinatura Eletrônica.",
+                    Areas = new List<string>() { "TAE" },
+                    SchemaUrl = "http://localhost:16908/DocumentsBusinessObjects/schema",
+                    DataUrl = "http://localhost:16908/DocumentsBusinessObjects/data",
                 }
             };
 

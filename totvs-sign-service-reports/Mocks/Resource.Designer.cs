@@ -59,55 +59,5 @@ namespace totvs_sign_service_reports.Mocks {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///    &quot;data&quot;: [
-        ///        {
-        ///            &quot;codcoligada&quot;: 1,
-        ///            &quot;chapa&quot;: &quot;00001&quot;,
-        ///            &quot;nome&quot;: &quot;ITAMAR MENDES DA SILVEIRA&quot;,
-        ///            &quot;salario&quot;: 3192.80
-        ///        },
-        ///        {
-        ///            &quot;codcoligada&quot;: 1,
-        ///            &quot;chapa&quot;: &quot;00003&quot;,
-        ///            &quot;nome&quot;: &quot;MARIA CONCEICAO DE ASSIS&quot;,
-        ///            &quot;salario&quot;: 5609.51
-        ///        },
-        ///        {
-        ///            &quot;codcoligada&quot;: 1,
-        ///            &quot;chapa&quot;: &quot;00008&quot;,
-        ///            &quot;nome&quot;: &quot;ZELIA APARECIDA DA SILVA&quot;,
-        ///            &quot;salario&quot;: 6787.51
-        ///        [rest of string was truncated]&quot;;.
-        /// </summary>
-        public static string FuncionarioDataString {
-            get {
-                return ResourceManager.GetString("FuncionarioDataString", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {
-        ///  &quot;Name&quot;: &quot;9b8ef474-35be-48fc-88ae-cff2003e757c&quot;,
-        ///  &quot;DisplayName&quot;: &quot;Objeto de Negócio sem Parâmetro&quot;,
-        ///  &quot;description&quot;: &quot;Objeto de Teste Parâmetro&quot;,
-        ///  &quot;areas&quot;: [
-        ///    &quot;Mockoon&quot;
-        ///  ],
-        ///  &quot;schemaUrl&quot;: &quot;http://localhost:3002//api/bis/v1/native-provider/objects/9b8ef474-35be-48fc-88ae-cff2003e757c/schema&quot;,
-        ///  &quot;dataUrl&quot;: &quot;http://localhost:3002//api/bis/v1/native-provider/objects/9b8ef474-35be-48fc-88ae-cff2003e757c/data/&quot;,
-        ///  &quot;properties&quot;: [
-        ///    {
-        ///      &quot;name&quot;: &quot;chapa&quot;,
-        ///      &quot;displayName&quot;: &quot;CHAPA&quot;,
-        ///    [rest of string was truncated]&quot;;.
-        /// </summary>
-        public static string FuncionarioSchemaString {
-            get {
-                return ResourceManager.GetString("FuncionarioSchemaString", resourceCulture);
-            }
-        }
     }
 }
