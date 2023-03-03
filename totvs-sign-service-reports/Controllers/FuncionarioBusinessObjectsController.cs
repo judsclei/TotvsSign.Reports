@@ -25,7 +25,7 @@ namespace totvs_sign_service_reports.Controllers
 
         [HttpPost]
         [Route("data")]
-        public TReportsDataResponse Data(GetDataRequest request)
+        public TReportsDataResponse Data(GetFuncionarioRequest request)
         {
             using (StreamReader r = new StreamReader(pathJsonData))
             {
