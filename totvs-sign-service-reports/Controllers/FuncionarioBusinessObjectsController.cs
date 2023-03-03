@@ -5,24 +5,28 @@ using totvs_sign_service_reports.Responses;
 
 namespace totvs_sign_service_reports.Controllers
 {
+    [Route("[controller]")]
+    [ApiController]
     public class FuncionarioBusinessObjectsController : Controller
     {
+        JsonSerializerOptions jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+
         [HttpGet]
         [Route("schema")]
         public SchemaResponse Schema()
         {
 
-            var response = JsonSerializer.Deserialize<SchemaResponse>(Resource.FuncionarioSchemaString);
+            var response = JsonSerializer.Deserialize<SchemaResponse>(Resource.FuncionarioSchemaString, jsonOptions);
 
             return response;
         }
 
         [HttpPost]
         [Route("data")]
-        public TReportsDataResponse Data(DataRequest request)
+        public TReportsDataResponse Data(GetDataRequest request)
         {
             var response = new TReportsDataResponse();
-            response = JsonSerializer.Deserialize<TReportsDataResponse>(Resource.FuncionarioDataString);
+            response = JsonSerializer.Deserialize<TReportsDataResponse>(Resource.FuncionarioDataString, jsonOptions);
 
             return response;
         }

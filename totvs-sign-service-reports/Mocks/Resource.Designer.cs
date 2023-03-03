@@ -90,8 +90,8 @@ namespace totvs_sign_service_reports.Mocks {
         
         /// <summary>
         ///   Looks up a localized string similar to {
-        ///  &quot;name&quot;: &quot;9b8ef474-35be-48fc-88ae-cff2003e757c&quot;,
-        ///  &quot;displayName&quot;: &quot;Objeto de Negócio sem Parâmetro&quot;,
+        ///  &quot;Name&quot;: &quot;9b8ef474-35be-48fc-88ae-cff2003e757c&quot;,
+        ///  &quot;DisplayName&quot;: &quot;Objeto de Negócio sem Parâmetro&quot;,
         ///  &quot;description&quot;: &quot;Objeto de Teste Parâmetro&quot;,
         ///  &quot;areas&quot;: [
         ///    &quot;Mockoon&quot;

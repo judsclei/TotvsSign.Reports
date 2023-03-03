@@ -197,8 +197,8 @@
   </data>
   <data name="FuncionarioSchemaString" xml:space="preserve">
     <value>{
-  "name": "9b8ef474-35be-48fc-88ae-cff2003e757c",
-  "displayName": "Objeto de Negócio sem Parâmetro",
+  "Name": "9b8ef474-35be-48fc-88ae-cff2003e757c",
+  "DisplayName": "Objeto de Negócio sem Parâmetro",
   "description": "Objeto de Teste Parâmetro",
   "areas": [
     "Mockoon"
@@ -242,16 +242,6 @@
         "isRequired": false
       }
     }
-  ],
-  "parameters": [
-
-    {
-      "name": "chapa",
-      "displayName": "chapa do funcionário",
-      "type": "string",
-      "multiValue": false
-    }
-
   ]
 }</value>
   </data>

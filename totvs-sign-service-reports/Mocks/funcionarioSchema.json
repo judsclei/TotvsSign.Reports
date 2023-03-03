@@ -44,15 +44,5 @@
         "isRequired": false
       }
     }
-  ],
-  "parameters": [
-
-    {
-      "name": "chapa",
-      "displayName": "chapa do funcionário",
-      "type": "string",
-      "multiValue": false
-    }
-
   ]
 }
